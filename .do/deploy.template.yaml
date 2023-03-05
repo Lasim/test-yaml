@@ -7,6 +7,8 @@ spec:
       branch: main
     dockerfile_path: Dockerfile
     instance_count: 1
+    http_port: 80
     health_check:
+      port: 80
       http_path: '/'
       initial_delay_seconds: 10
