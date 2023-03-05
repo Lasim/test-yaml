@@ -6,3 +6,8 @@ spec:
       repo_clone_url: https://github.com/Lasim/test-yaml
       branch: main
     dockerfile_path: Dockerfile
+    instance_count: 1
+    health_check:
+      port: 80
+      http_path: '/'
+      initial_delay_seconds: 10
