@@ -1,0 +1,18 @@
+services:
+  # A Docker web service
+  - type: web
+    name: gokapi
+    env: docker
+    numInstances: 1
+    healthCheckPath: /
+    envVars:
+    - key: PORT
+      value: 53842
+    - key: GOKAPI_CONFIG_DIR
+      value: '/app/disc-mount/config'
+    - key: GOKAPI_DATA_DIR
+      value: '/app/disc-mount/data'      
+    disk:
+      name: data
+      mountPath: '/app/disc-mount'
+      sizeGB: 1 # optiona

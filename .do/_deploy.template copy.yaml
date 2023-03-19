@@ -1,0 +1,14 @@
+spec:
+  name: test-piotr-dockerfile
+  services:
+  - name: web
+    git:
+      repo_clone_url: https://github.com/Lasim/test-yaml
+      branch: main
+    dockerfile_path: Dockerfile
+    instance_count: 1
+    http_port: 80
+    health_check:
+      port: 80
+      http_path: '/'
+      initial_delay_seconds: 10
